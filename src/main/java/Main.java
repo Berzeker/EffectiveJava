@@ -21,5 +21,20 @@ public class Main {
         Microbe microbe = new VirusMicrobe("ALPHA", dateNaissance);
         System.out.println(microbe.getName());
 
+        //2- La classe Date est mutable, la valeur du champ dateNaissance peut être modifiée et changer ainsi changer
+        //le status de l'instance
+        System.out.println("Pas de copie defensive au niveau du constructeur");
+        Microbe microbeBeta = new Microbe("Beta", dateNaissance);
+        System.out.println(microbeBeta.getDateNaissance());
+        dateNaissance.setTime(new Date().getTime());
+        System.out.println(microbeBeta.getDateNaissance());
+
+        System.out.println("Pas de copie defensive au niveau du getteur");
+        dateNaissance = formater.parse(dateNaissanceStr);
+        Microbe microbeGama = new Microbe("Gama", dateNaissance);
+        System.out.println(microbeGama.getDateNaissance());
+        microbeGama.getDateNaissance().setTime(new Date().getTime());
+        System.out.println(microbeGama.getDateNaissance());
+
     }
 }
