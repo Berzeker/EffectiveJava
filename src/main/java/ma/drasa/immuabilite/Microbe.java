@@ -5,14 +5,14 @@ import java.util.Date;
 /**
  * Created by berzeker on 30/11/16.
  */
-public class Microbe {
+public final class Microbe {
 
     private final String name;
     private final Date dateNaissance;
 
     public Microbe (String name, Date dateNaissance) {
         this.name = name;
-        this.dateNaissance = dateNaissance;
+        this.dateNaissance = (Date) dateNaissance.clone();
     }
 
     public String getName() {
@@ -20,6 +20,6 @@ public class Microbe {
     }
 
     public Date getDateNaissance() {
-        return dateNaissance;
+        return (Date) dateNaissance.clone();
     }
 }
