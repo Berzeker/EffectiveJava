@@ -10,9 +10,24 @@ Pour concevoir une classe immuable, certaines r&#0232;gles doivent &#0234;tre ap
 3. Tous les champs de la classe doivent &#0234;tre *private* et *final* : *private* pour interdire l'acc&#0232;s direct aux champs ayant des objets mutables et *final* pour garantir la non modification des r&#0233;f&#0233;rences.
 4. Assurer un acc&#0232;s exclusif à tous les champs mutables : Assurer que le client de la classe ne peut jamais avoir la r&#0233;f&#0233;rence des objets mutables, au niveau de l'initialisation du constructeur et au niveau des m&#0233;thodes retournant les champs en question. Toujours r&#0233;aliser des copies d&#0233;fensifs sur le objets mutables pour garantir leur status.
 
-La classe Microbe est un exemple d'une classe immuable. Chaque microbe est unique et ne peut &#0234;tre modifi&#0233;.
+### Exemple avec la classe Microbe :
 
+#### classe microbe ne respectant pas les r&#0232;gles d'immuabilit&#0233; 
+\| commit                                                      \|
+\| ----------------------------------------------------------- \|
+\|  git reset --hard 2ac5602360382fdad1631cc9f7cc309b3c0028aa  \|
 
+La classe Microbe est non immuable, elle contient plusieur d&#0233;fauts :
+1. Elle permet l'h&#0233;ritage, il est ainssi possible qu'une sous-classe simule un changement d'&#0233;tat et compremettre l'immmabilit&#0233;. 
+Dans l'exemple, c'est le cas de la classe VirusMicrobe qui surcharge le nom des microbes.
+
+2. les champs mutables n'ont pas un acc&#0232;s exclusif. La classe Date est mutable et il est possible dans l'exemple pr&#0233;sent de modifier la valeur du champ *dateNaissance*
+via sa r&#0233;f&#0233;rence. Sans l'absence d'une copie d&#0233;fensive du champ mutable, le status de chaque instance Microbe peut &#0234;tre modifi&#0233; à tout moment..
+
+#### classe microbe immuable
+git reset --hard 6f6b99ef2d79dd6654ab0318bbb446a18eec46a7
+
+La classe Microbe est d&#0233;somais immuable et respecte les 4 r&#0232;gles mentionn&#0233;es plus haut.
 
 
 
