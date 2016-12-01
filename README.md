@@ -13,11 +13,12 @@ Pour concevoir une classe immuable, certaines r&#0232;gles doivent &#0234;tre ap
 ### Exemple avec la classe Microbe :
 
 #### classe microbe ne respectant pas les r&#0232;gles d'immuabilit&#0233; 
-\| commit                                                      \|
-\| ----------------------------------------------------------- \|
-\|  git reset --hard 2ac5602360382fdad1631cc9f7cc309b3c0028aa  \|
+| commit |
+|  --------------------------------------------------------- |
+|  git reset --hard 2ac5602360382fdad1631cc9f7cc309b3c0028aa |
 
 La classe Microbe est non immuable, elle contient plusieur d&#0233;fauts :
+
 1. Elle permet l'h&#0233;ritage, il est ainssi possible qu'une sous-classe simule un changement d'&#0233;tat et compremettre l'immmabilit&#0233;. 
 Dans l'exemple, c'est le cas de la classe VirusMicrobe qui surcharge le nom des microbes.
 
