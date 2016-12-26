@@ -21,7 +21,7 @@ public class Main {
         //le status de l'instance
         System.out.println("copie defensive au niveau du constructeur");
         String nameMicrobe = "Beta";
-        Microbe microbeBeta = new Microbe(nameMicrobe, dateNaissance);
+        Microbe microbeBeta = Microbe.newInstance(nameMicrobe, dateNaissance);
         System.out.println(microbeBeta.getName());
         System.out.println(microbeBeta.getDateNaissance());
 
@@ -32,10 +32,18 @@ public class Main {
 
         System.out.println("copie defensive au niveau du getteur");
         dateNaissance = formater.parse(dateNaissanceStr);
-        Microbe microbeGama = new Microbe("Gama", dateNaissance);
+        Microbe microbeGama = Microbe.newInstance("Gama", dateNaissance); 
         System.out.println(microbeGama.getDateNaissance());
         microbeGama.getDateNaissance().setTime(new Date().getTime());
         System.out.println(microbeGama.getDateNaissance());
-
+        
+        //Utilisation du cache
+        Microbe grippeA = Microbe.newInstance("GRIPPE");
+        Microbe grippeB = Microbe.GRIPPE;
+        
+        if (grippeA == grippeB) 
+        	System.out.println("Même grippe");
+        else 
+        	System.out.println("Pas Même grippe");
     }
 }
