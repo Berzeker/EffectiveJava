@@ -27,7 +27,7 @@ via sa r&#0233;f&#0233;rence. Sans l'absence d'une copie d&#0233;fensive du cham
 
 #### classe microbe immuable
 | commit |
-|  --------------------------------------------------------- |
+|: ---------------------------------------------------------: |
 |  git reset --hard 6f6b99ef2d79dd6654ab0318bbb446a18eec46a7 |
 
 La classe Microbe est d&#0233;somais immuable et respecte les 4 r&#0232;gles mentionn&#0233;es plus haut.
@@ -39,6 +39,7 @@ Le seul inconv&#0233;nient des classes immuables c'est qu'elles ont besoin d'une
 Une solution facile et d'encourager à r&#0233;-utiliser les instances fr&#0233;quemment utilis&#0233;es, en les mettant à disposition via des constantes **public static final**
 
 ###Exemple constantes :###
+|: ------------------------------------------------------------: |
 |  public static final Microbe GRIPPE = new Microbe("GRIPPE");  |
 |  public static final Microbe RHUME = new Microbe("RHUME");  |
 |  public static final Microbe GASTRO = new Microbe("GASTRO");  |
