@@ -40,11 +40,9 @@ Une solution facile et d'encourager à r&#0233;-utiliser les instances fr&#0233;q
 
 ###Exemple constantes :###
 
-|  |
-| ------------------------------------------------------------ |
-|  public static final Microbe GRIPPE = new Microbe("GRIPPE");  |
-|  public static final Microbe RHUME = new Microbe("RHUME");  |
-|  public static final Microbe GASTRO = new Microbe("GASTRO");  |
+> public static final Microbe GRIPPE = new Microbe("GRIPPE"); <br/>
+  public static final Microbe RHUME = new Microbe("RHUME");<br/>
+  public static final Microbe GASTRO = new Microbe("GASTRO");
 
 Il est possible aussi de cacher les instances lors de leur cr&#0233;ation. Pour cela il est possible d'utiliser des m&#0233;thodes fabriques au lieu des constructeurs.
 
