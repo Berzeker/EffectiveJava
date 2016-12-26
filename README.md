@@ -39,6 +39,8 @@ Le seul inconv&#0233;nient des classes immuables c'est qu'elles ont besoin d'une
 Une solution facile et d'encourager à r&#0233;-utiliser les instances fr&#0233;quemment utilis&#0233;es, en les mettant à disposition via des constantes **public static final**
 
 ###Exemple constantes :###
+
+|  |
 | ------------------------------------------------------------ |
 |  public static final Microbe GRIPPE = new Microbe("GRIPPE");  |
 |  public static final Microbe RHUME = new Microbe("RHUME");  |
