@@ -39,9 +39,9 @@ Le seul inconv&#0233;nient des classes immuables c'est qu'elles ont besoin d'une
 Une solution facile et d'encourager à r&#0233;-utiliser les instances fr&#0233;quemment utilis&#0233;es, en les mettant à disposition via des constantes **public static final**
 
 ###Exemple constantes :###
-| public static final Microbe GRIPPE = new Microbe("GRIPPE"); |
-| public static final Microbe RHUME = new Microbe("RHUME"); |
-| public static final Microbe GASTRO = new Microbe("GASTRO"); |
+|  public static final Microbe GRIPPE = new Microbe("GRIPPE");  |
+|  public static final Microbe RHUME = new Microbe("RHUME");  |
+|  public static final Microbe GASTRO = new Microbe("GASTRO");  |
 
 Il est possible aussi de cacher les instances lors de leur cr&#0233;ation. Pour cela il est possible d'utiliser des m&#0233;thodes fabriques au lieu des constructeurs.
 
